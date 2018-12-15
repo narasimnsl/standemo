@@ -1,0 +1,80 @@
+/*CSS for Footer*/
+.footerContainer{
+    min-height: 200px;
+    background-color: $footer-bg-clr;
+    color:$footer-txt-clr;
+    padding: 30px 120px;
+    font-size:0.8em;
+    .textContainer{
+        .Flex-ul{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            .Flex-item{
+                margin-right: 20px;
+                position: relative;
+                &:not(:last-child):after{
+                    content: "";
+                    position: absolute;
+                    background: white;
+                    width: 1px;
+                    height: 10px;
+                    top: 50%;
+                    right:-10px;
+                    transform: translateY(-50%);
+                } 
+            } 
+        }
+    }
+    .imageContainer{
+        display: flex;
+        flex-direction: row;
+        
+        .leftItem {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            flex: 1 0 0;
+            img{
+                margin-right: 20px;
+            }
+        }
+        .rightItem {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            flex: 1 0 0;
+            text-align: right;
+            img{
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+    
+}
+
+
+/* On screens that are 768px or less, set the Module Wrapper width 100% */
+@media screen and (max-width: 768px) {
+    .footerContainer{
+        min-height: 200px;
+        padding: 20px;
+        .textContainer{
+            .Flex-ul{
+                display: inline-flex;
+            }
+        }
+        .imageContainer{
+            display: block;
+            .leftItem {
+                margin-bottom: 20px;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,66 @@
+/*CSS for Header*/
+.HeaderContainer{
+    min-height: 60px;
+    color:$header-txt-clr;
+    background-repeat:repeat-x;
+    background-image: linear-gradient($header-top-grad-clr,$header-bot-grad-clr);
+    background-color: $header-bg-clr;
+    box-shadow: 0 4px 2px -2px #666;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    z-index: 999999;
+    .leftItem {
+        padding-left:120px;
+        flex: 1 0 0;
+        h1{
+            margin: 0px;
+            line-height: 60px;
+        }
+     }
+     .rightItem {
+        padding-right: 120px;
+        flex: 1 0 0;
+        text-align: right;
+
+        .loginText{
+            display:inline-block;
+            vertical-align: middle;
+            line-height: 60px;
+        }
+        .headerButton{
+            display:inline-block;
+            background-color: #555;
+            border:none;
+            padding:10px 20px;
+            color: #fff;
+            margin-left:30px;
+            font-size: 16px;
+        }
+     }
+        
+
+}
+
+/* On screens that are 768px or less, set the Module Wrapper width 100% */
+@media screen and (max-width: 768px) {
+    .HeaderContainer{
+        display: inline-flex;
+        .leftItem {
+            flex: 2 0 0;
+            padding-left:20px;
+            h1{
+                font-size: 1.2em
+            }
+        }
+        .rightItem {
+            padding-right:20px;
+            .headerButton{
+            display: none;
+            }
+        }
+    }
+}

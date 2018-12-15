@@ -1,0 +1,44 @@
+/*CSS for Content*/
+.contentContainer{
+     min-height: 400px;
+     margin-top: 60px;
+    .pageTitle{
+        padding:0px 120px;
+        min-height: 50px;
+        background-color: $con-header-bg-clr;
+        color: $con-header-txt-clr;
+        h2{
+            margin:0px;
+            line-height: 50px;
+        }
+    }
+    .pageContent{
+        padding:30px 120px;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: flex-start;
+        
+    }
+
+}
+
+
+/* On screens that are 768px or less, set the Module Wrapper width 100% */
+@media screen and (max-width: 768px) {
+    .contentContainer{
+        min-height: 300px;
+        .pageTitle{  
+         padding:0px 20px;
+         h2{
+             font-size: 1em;
+         }
+        }
+
+        .pageContent{
+           padding: 20px;
+           justify-content: center;
+        }
+        
+        
+    }
+}
